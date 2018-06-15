@@ -10,7 +10,6 @@ parameters:
     pim_enrich.repository.group.class:                   Pim\Bundle\EnrichBundle\Doctrine\ORM\Repository\GroupRepository
     pim_enrich.repository.group_type.class:              Pim\Bundle\EnrichBundle\Doctrine\ORM\Repository\GroupTypeRepository
     pim_enrich.repository.association_type.class:        Pim\Bundle\EnrichBundle\Doctrine\ORM\Repository\AssociationTypeRepository
-    pim_enrich.repository.attribute.class:               Pim\Bundle\EnrichBundle\Doctrine\ORM\Repository\AttributeRepository
     pim_enrich.repository.family.class:                  Pim\Bundle\EnrichBundle\Doctrine\ORM\Repository\FamilyRepository
     pim_enrich.repository.family_variant.class:          Pim\Bundle\EnrichBundle\Doctrine\ORM\Repository\FamilyVariantRepository
     pim_enrich.repository.locale.class:                  Pim\Bundle\EnrichBundle\Doctrine\ORM\Repository\LocaleRepository
@@ -70,13 +69,6 @@ services:
         arguments:
             - '@doctrine.orm.entity_manager'
             - '%pim_catalog.entity.association_type.class%'
-
-    pim_enrich.repository.attribute:
-        class: '%pim_enrich.repository.attribute.class%'
-        arguments:
-            - '@pim_user.context.user'
-            - '@doctrine.orm.entity_manager'
-            - '%pim_catalog.entity.attribute.class%'
 
     pim_enrich.repository.family:
         class: '%pim_enrich.repository.family.class%'
