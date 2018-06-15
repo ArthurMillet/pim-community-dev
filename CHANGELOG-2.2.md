@@ -1,3 +1,9 @@
+# 2.2.x
+
+## Bug fixes
+
+- PIM-7413: Newly created attribute group is correctly sorted after existing ones
+
 # 2.2.9 (2018-06-14)
 
 ## Bug fixes
